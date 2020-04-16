@@ -277,7 +277,7 @@ void QZeroConf::startServicePublish(const char *name, const char *type, const ch
 		return;
 	}
 
-	err = DNSServiceRegister(&pri->dnssRef, NULL, NULL,
+    err = DNSServiceRegister(&pri->dnssRef, 0, 0,
 			name,
 			type,
 			domain,
